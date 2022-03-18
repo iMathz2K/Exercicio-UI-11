@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/iMathz2K/Exercicio-UI-11#readme",
   "devDependencies": {
-    "cypress": "^9.5.2"
+    "cypress": "^9.5.2",
+    "faker": "^5.5.3"
   }
 }
