@@ -1,5 +1,6 @@
 /// <reference types="cypress" />
 
+
 describe('Funcionalidade Página de Produtos', () => {
 
     beforeEach(() => {
@@ -16,16 +17,19 @@ describe('Funcionalidade Página de Produtos', () => {
 
     });
 
-    it.only('Deve adicionar um produto ao carrinho', () => {
+    it('Deve adicionar um produto ao carrinho', () => {
+       
+
         cy.get('.product-block')
             .contains('Ariel Roll Sleeve Sweatshirt').click()
-        cy.get('.button-variable-item-S').click()
+        cy.get('.button-variable-item-M').click()
         cy.get('.button-variable-item-Green').click()
-        cy.get('.input-text').clear().type(1)
+        cy.get('.input-text').clear().type(4)
         cy.get('.single_add_to_cart_button').click()
 
-        cy.get('.dropdown-toggle > .mini-cart-items').should('contain' , 1)
-        cy.get('.woocommerce-message').should('contain' , '“Ariel Roll Sleeve Sweatshirt” foi adicionado no seu carrinho.')
+        cy.get('.dropdown-toggle > .mini-cart-items').should('contain' , 4)
+        cy.get('.woocommerce-message').should('contain' , '4 × “Ariel Roll Sleeve Sweatshirt” foram adicionados no seu carrinho.')
         
-    });
+});
+
 });

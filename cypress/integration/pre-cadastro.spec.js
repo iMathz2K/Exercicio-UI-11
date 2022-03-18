@@ -17,6 +17,8 @@ beforeEach(() => {
         cy.get('#account_first_name').type('Matheus')
         cy.get('#account_last_name').type('Costa')
         cy.get('.woocommerce-Button').click()
+
+        cy.get('.woocommerce-message').should('contain' , 'Detalhes da conta modificados com sucesso.')
        
     });
     
