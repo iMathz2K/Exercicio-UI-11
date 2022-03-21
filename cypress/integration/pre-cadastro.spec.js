@@ -4,11 +4,12 @@ import { internet } from 'faker';
 describe('Funcionalidade Pré Cadastro', () => {
 
 beforeEach(() => {
-    cy.visit('http://lojaebac.ebaconline.art.br/minha-conta/')
+    cy.visit('minha-conta')
     
 });
 
     it('Deve completar o pré cadastro com sucesso', () => {
+        
         cy.get('#reg_email').type(internet.email())
         cy.get('#reg_password').type('!teste@teste$')
         cy.get(':nth-child(4) > .button').click()
